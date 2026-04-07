@@ -1,0 +1,17 @@
+# Key emission lines for PDR analysis
+# Format: label wavelength
+C  2 157.636m
+O  1 63.1679m
+O  1 145.525m
+O  3 88.3323m
+O  3 5006.84A
+O  3 4958.91A
+O  2 3726.03A
+O  2 3728.81A
+N  2 6583.45A
+S  2 6716.44A
+S  2 6730.82A
+H  1 6562.81A
+H  1 4861.33A
+TOTL 4861.33A
+end of lines

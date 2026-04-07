@@ -1,0 +1,35 @@
+title GP_PDR_grid G2.00_n3.75
+#
+# === Radiation field ===
+# CMB at z=0
+CMB
+# Starburst SED: Leitherer+1999, age=4 Myr, Z=0.004
+table SED "starburst99.mod" age=4.0e6 years
+# FUV intensity: log G0 = 2.00 Habing
+intensity -0.7959 range 6.0 to 13.6 Ryd
+#
+# === Gas properties ===
+hden 3.75 log
+constant pressure
+#
+# === Abundances: scaled to Z/Z_sun = 0.20 ===
+abundances planetary nebula, scale=0.20
+#
+# === Grains: ISM + PAH, scaled to metallicity ===
+grains ISM -0.699 log
+grains PAH -0.699 log
+#
+# === Stopping criteria ===
+stop temperature 10.0K
+stop column density 22.0 log
+#
+# === Output ===
+set save prefix "G2.00_n3.75"
+save overview ".ovr" last
+save continuum ".con" last units microns
+save lines, emissivity ".ems" last
+save lines list ".lin" "lines.dat" last
+save PDR ".pdr" last
+save heating ".het" last
+save cooling ".col" last
+#
